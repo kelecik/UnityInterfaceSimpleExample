@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 1010513049}
   - component: {fileID: 1010513048}
   - component: {fileID: 1010513052}
+  - component: {fileID: 1010513053}
   m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
@@ -511,7 +512,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010513047}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -575,7 +576,7 @@ Transform:
   m_LocalScale: {x: 2, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1010513052
 MonoBehaviour:
@@ -589,6 +590,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ad65d7135ec7e42b0f9119b57252e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1010513053
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010513047}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1338108370
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +619,6 @@ GameObject:
   - component: {fileID: 1338108372}
   - component: {fileID: 1338108371}
   - component: {fileID: 1338108375}
-  - component: {fileID: 1338108376}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -621,8 +637,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 4.2617106}
+  m_Center: {x: 0, y: 0, z: -1.6308553}
 --- !u!23 &1338108372
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -678,11 +694,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338108370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 5}
+  m_LocalPosition: {x: 0, y: 1.5, z: 9}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1338108375
 MonoBehaviour:
@@ -696,23 +712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d578d3b3b20c93f4a842acc300348966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nearstObjectClass: {fileID: 1338108376}
---- !u!114 &1338108376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338108370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2349b307e7d11b643932c47e440ecf32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeObject: {fileID: 0}
-  nearstObjectLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!1 &1390884130
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +725,7 @@ GameObject:
   - component: {fileID: 1390884133}
   - component: {fileID: 1390884132}
   - component: {fileID: 1390884131}
+  - component: {fileID: 1390884136}
   m_Layer: 9
   m_Name: Door_2
   m_TagString: Untagged
@@ -753,7 +753,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390884130}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -819,6 +819,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1390884136
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390884130}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1447122580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +1021,7 @@ Transform:
   - {fileID: 629985179}
   - {fileID: 1447122581}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836918950
 GameObject:
@@ -1193,5 +1209,5 @@ Transform:
   - {fileID: 313054438}
   - {fileID: 1836918954}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
